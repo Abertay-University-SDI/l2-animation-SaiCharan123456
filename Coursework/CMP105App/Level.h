@@ -2,6 +2,9 @@
 
 #include "Framework/BaseLevel.h"
 #include "Framework/GameObject.h"
+#include "Player.h"
+
+
 
 class Level : BaseLevel {
 public:
@@ -19,6 +22,8 @@ private:
 	enum class Direction{ UP, DOWN, LEFT, RIGHT, UP_RIGHT, DOWN_RIGHT, DOWN_LEFT, UP_LEFT, NONE };
 	Direction m_direction = Direction::NONE;
 	sf::CircleShape m_snake;
+	Player m_sheep;
+    sf::Texture m_sheepTexture;
 	float m_speed = 300.0f;
 	float m_inputBuffer = 0.f;
 	bool m_gameOver = false;
